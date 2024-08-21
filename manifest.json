@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Google News+",
+  "version": "1.0",
+  "description": "Replaces the searchbar with a more useful one. Makes a perfect homepage.",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "scripting"
+  ],
+  
+  "host_permissions": [
+    "https://news.google.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://news.google.com/*"],
+      "js": ["contentScript.js"],
+      "type": "module",
+      "css": ["styles.css"]
+    }
+  ],
+    "action": {
+    "default_icon": {
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "icons": {
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
